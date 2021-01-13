@@ -30,7 +30,7 @@ class PlayingField {
     }
 
     Iterable<PlayingField> swapAdjacentPositions() {
-        HashSet<PlayingField> fieldList = new HashSet<>();
+        ArrayList<PlayingField> fieldList = new ArrayList<>();
         fieldList.add(change2Cells(getNewField(), xo, yo, xo, yo + 1));
         fieldList.add(change2Cells(getNewField(), xo, yo, xo, yo - 1));
         fieldList.add(change2Cells(getNewField(), xo, yo, xo - 1, yo));
