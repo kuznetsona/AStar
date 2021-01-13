@@ -40,7 +40,6 @@ class PlayingField {
 
     boolean isEquals(Object obj) {
         if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
         PlayingField field = (PlayingField) obj;
         if (field.getLength() != getLength()) return false;
         for (int i = 0; i < this.field.length; i++)
