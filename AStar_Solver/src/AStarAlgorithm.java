@@ -6,7 +6,7 @@ class AStarAlgorithm {
     private List<PlayingField> result = new ArrayList<>();
 
     AStarAlgorithm(PlayingField initial) {
-        if(isSolvable()) return;
+
         PriorityQueue<AStarAlgorithm.ITEM> priorityQueue = new PriorityQueue<>(10, Comparator.comparingInt(AStarAlgorithm::heuristicFunction));
         priorityQueue.add(new AStarAlgorithm.ITEM(null, initial));
         while (true){
@@ -69,9 +69,6 @@ class AStarAlgorithm {
         }
     }
 
-    private boolean isSolvable() {
-        return false;
-    }
 
     Iterable<PlayingField> getSolution() {
         return result;
