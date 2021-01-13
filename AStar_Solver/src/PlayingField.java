@@ -37,11 +37,8 @@ class PlayingField {
         fieldList.add(change2Cells(getNewField(), xo, yo, xo + 1, yo));
         return fieldList;
     }
-
-    boolean isEquals(Object obj) {
-        if (this == obj) return true;
-        PlayingField field = (PlayingField) obj;
-        if (field.getLength() != getLength()) return false;
+    
+    boolean isEquals(PlayingField field) {  
         for (int i = 0; i < this.field.length; i++)
             for (int j = 0; j < this.field[i].length; j++)
                 if (this.field[i][j] != field.field[i][j]) return false;
