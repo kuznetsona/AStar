@@ -42,5 +42,14 @@ public class TestSolver {
         assertTrue(playingField.isSolvable());
     }
 
+    @Test
+    public void isSolverTest4(){
+        int[][] cells = new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 0}};
+        PlayingField playingField = new PlayingField(cells);
+        playingField = OutputSolution(playingField);
+        assertTrue(playingField.isSolvable());
+    }
+
+
 
 }
