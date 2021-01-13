@@ -1,4 +1,3 @@
-
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertTrue;
@@ -22,34 +21,31 @@ public class TestSolver {
     public void isSolverTest(){
         int[][] cells = new int[][]{{1, 2, 3, 0}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 4}};
         PlayingField playingField = new PlayingField(cells);
-        playingField = OutputSolution(playingField);
-        assertTrue(playingField.isSolvable());
+        assertTrue(OutputSolution(playingField).isSolvable());
     }
 
     @Test
     public void isSolverTest2(){
         int[][] cells = new int[][]{{15, 5, 12, 1}, {10, 7, 6, 11}, {14, 8, 3, 0}, {9, 13, 4, 2}};
         PlayingField playingField = new PlayingField(cells);
-        playingField = OutputSolution(playingField);
-        assertFalse(playingField.isSolvable());
+        assertFalse(OutputSolution(playingField).isSolvable());
     }
 
     @Test
     public void isSolverTest3(){
         int[][] cells = new int[][]{{0, 1, 2, 3}, {6, 7, 8, 4}, {5, 9, 10, 11}, {13, 14, 15, 12}};
         PlayingField playingField = new PlayingField(cells);
-        playingField = OutputSolution(playingField);
-        assertTrue(playingField.isSolvable());
+        assertTrue(OutputSolution(playingField).isSolvable());
     }
 
     @Test
     public void isSolverTest4(){
         int[][] cells = new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 0}};
         PlayingField playingField = new PlayingField(cells);
-        playingField = OutputSolution(playingField);
-        assertTrue(playingField.isSolvable());
+        assertTrue(OutputSolution(playingField).isSolvable());
     }
 
 
 
 }
+
