@@ -66,7 +66,7 @@ class PlayingField {
         int n = field.length;
         int m = field[0].length;
         int s = 0;
-        int nullI = 0;
+        int zero = 0;
         for (int i = 0; i < n; i++)
             for (int j = 0; j < m; j++)
                 if (field[i][j] != 0) {
@@ -76,10 +76,10 @@ class PlayingField {
                                 s++;
                 }
                 else
-                    nullI = i + 1;
-        s = s + nullI;
+                    zero = i + 1;
+        s = s + zero;
 
-        if ((s%2 == 0) || (s == nullI)) {
+        if ((s%2 == 0) || (s == zero)) {
             return true;
         }
         else {
