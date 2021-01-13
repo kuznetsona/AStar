@@ -1,13 +1,14 @@
 import java.util.*;
 
 import static java.util.Collections.*;
+import static java.util.Comparator.*;
 
 class AStarAlgorithm {
     private List<PlayingField> result = new ArrayList<>();
 
     AStarAlgorithm(PlayingField initial) {
 
-        PriorityQueue<AStarAlgorithm.ITEM> priorityQueue = new PriorityQueue<>(10, Comparator.comparingInt(AStarAlgorithm::heuristicFunction));
+        PriorityQueue<AStarAlgorithm.ITEM> priorityQueue = new PriorityQueue<>(10, comparingInt(item -> heuristicFunction(item)));
         priorityQueue.add(new AStarAlgorithm.ITEM(null, initial));
         while (true){
             AStarAlgorithm.ITEM field = priorityQueue.poll();
