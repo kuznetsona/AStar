@@ -1,5 +1,7 @@
 import java.util.*;
 
+import static java.util.Collections.*;
+
 class AStarAlgorithm {
     private List<PlayingField> result = new ArrayList<>();
 
@@ -60,7 +62,7 @@ class AStarAlgorithm {
         while (true){
             item2 = item2.previousField;
             if(item2 == null) {
-                Collections.reverse(result);
+                reverse(result); 
                 return;
             }
             result.add(item2.field);
